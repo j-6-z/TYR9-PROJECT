@@ -12,7 +12,8 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "/index.html",
+      "status": 200
     }
   ],
   "headers": [
@@ -57,11 +58,5 @@
     }
   ],
   "cleanUrls": true,
-  "trailingSlash": false,
-  "rewrites": [
-    {
-      "source": "/:path*",
-      "destination": "/index.html"
-    }
-  ]
+  "trailingSlash": false
 }
