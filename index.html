@@ -32,11 +32,10 @@
             justify-content: space-between;
             align-items: center;
         }
-        .logo {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.5rem;
-            color: #FF6B6B;
-            font-weight: 700;
+        .logo img {
+            max-height: 40px; /* Adjust logo size for header */
+            width: auto; /* Maintain aspect ratio */
+            display: block;
         }
         .nav-links {
             display: flex;
@@ -66,6 +65,7 @@
             padding: 5rem 1rem 2rem;
             background: linear-gradient(135deg, #FF6B6B, #4ECDC4);
             color: white;
+            text-align: center; /* Center content since no image */
         }
         .hero-content {
             flex: 1;
@@ -89,13 +89,6 @@
         }
         .cta-button:hover {
             transform: translateY(-2px);
-        }
-        .hero-image img {
-            max-width: 400px; /* Limit logo size */
-            width: 100%; /* Ensure responsiveness */
-            border-radius: 10px;
-            flex: 1;
-            display: block;
         }
         /* Other Sections */
         .about, .features, .buy {
@@ -174,17 +167,22 @@
             .hero-title {
                 font-size: 2rem;
             }
+            .logo img {
+                max-height: 30px; /* Smaller logo on mobile */
+            }
         }
     </style>
 </head>
 <body>
     <header class="header">
         <nav class="nav">
-            <div class="logo">TYR9</div>
+            <div class="logo">
+                <img src="/public/images/tyr9logo1.jpg" alt="TYR9 Logo">
+            </div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#buy">Buy Now</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="trade.html">Buy Now</a></li>
             </ul>
             <div class="hamburger">☰</div>
         </nav>
@@ -194,9 +192,6 @@
             <h1 class="hero-title">TYR9</h1>
             <p class="hero-subtitle">Solana-based meme token ready to dominate.</p>
             <button class="cta-button" id="buyBtn">Buy $TYR9</button>
-        </div>
-        <div class="hero-image">
-            <img src="/public/images/tyr9logo1.jpg" alt="TYR9 Logo">
         </div>
     </section>
     <section id="about" class="about">
